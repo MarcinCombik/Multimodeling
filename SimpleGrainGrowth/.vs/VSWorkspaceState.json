@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ClassLibrary1",
+    "\\ClassLibrary1\\AdditionalSetups",
+    "\\ClassLibrary1\\Handlers",
+    "\\WpfApp2",
+    "\\WpfApp2\\bin",
+    "\\WpfApp2\\bin\\Debug",
+    "\\WpfApp2\\obj",
+    "\\WpfApp2\\obj\\Debug",
+    "\\WpfApp2\\Properties"
+  ],
+  "SelectedNode": "\\ClassLibrary1\\Handlers\\SaveHandler.cs",
+  "PreviewInSolutionExplorer": false
+}

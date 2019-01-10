@@ -1,0 +1,79 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="850" Width="924.5">
+    <Grid x:Name="rxStart" Margin="0,0,2,-4" Background="#FF99B4D1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="71*"/>
+            <ColumnDefinition Width="843*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas x:Name="canvas" HorizontalAlignment="Left" Height="600" VerticalAlignment="Top" Width="600" RenderTransformOrigin="0.44,0.502" Background="#FFF3F1F1" OpacityMask="#FFF3F3F3" Grid.ColumnSpan="2" Margin="0,0
+                ,0,0">
+            <StackPanel x:Name="Load" Height="602" Canvas.Left="-9" Canvas.Top="10" Width="618"/>
+        </Canvas>
+        <Button Content="Add random grains
+                " HorizontalAlignment="Center" Margin="568,52,69,0" VerticalAlignment="Top" Width="206" Click="addRandomGrainsButton_Click" Height="28" TextOptions.TextHintingMode="Fixed" FontWeight="Bold" Grid.Column="1"/>
+        <TextBox x:Name="addRandomGrainsNumber" HorizontalAlignment="Left" Height="28" Margin="534,52,0,0" TextWrapping="Wrap" Text="5
+                 " VerticalAlignment="Top" Width="29" RenderTransformOrigin="-1.839,-2.87" FontSize="18" TextChanged="addRandomGrainsNumber_TextChanged" Grid.Column="1" TextAlignment="Center"/>
+        <Label Content="&#x9;Neighbourhood" HorizontalAlignment="Left" Margin="534,90,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="309" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" Grid.Column="1"/>
+        <ComboBox x:Name="inclusionsComboBox" HorizontalAlignment="Left" Margin="534,251,0,0" VerticalAlignment="Top" Width="286" RenderTransformOrigin="0.536,-2.136" SelectionChanged="icnlusionsComboBox_SelectionChanged" Grid.Column="1"/>
+        <StackPanel x:Name="loadingStackPanel" HorizontalAlignment="Left" Height="64" Margin="201,275,0,0" VerticalAlignment="Top" Width="188" Background="White" Visibility="Collapsed">
+            <Label x:Name="loadingLabel" Content="Processing" FontSize="36" Height="65" Margin="0,0,10,0"/>
+        </StackPanel>
+
+        <TextBox x:Name="incusionsNumberField" HorizontalAlignment="Left" Height="23" Margin="534,223,0,0" TextWrapping="Wrap" Text="20
+                 " VerticalAlignment="Top" Width="20" TextChanged="numberOfInclusionsField_TextChanged" Grid.Column="1" RenderTransformOrigin="0.4,-0.435"/>
+        <Button x:Name="exportTxt" Content="Export - txt format" HorizontalAlignment="Left" Margin="88,736,0,0" VerticalAlignment="Top" Width="128" Height="36" Click="exportTxt_Click" Grid.Column="1" RenderTransformOrigin="0.5,0.156"/>
+        <Button x:Name="exportImage" Content="Export- BMP format" HorizontalAlignment="Left" Margin="88,776,0,0" VerticalAlignment="Top" Width="128" Height="36" Click="exportImage_Click" Grid.Column="1"/>
+        <Button x:Name="importTxt" Content="Import - txt " HorizontalAlignment="Left" Margin="10,736,0,0" VerticalAlignment="Top" Width="144" Height="36" Click="importTxt_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="importImage" Content="Import - BMP" HorizontalAlignment="Left" Margin="10,776,0,0" VerticalAlignment="Top" Width="144" Height="36" Click="importImage_Click" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="inclusionsSizeField" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="614,223,0,0" TextWrapping="Wrap" Text="5
+                 " VerticalAlignment="Top" Width="75" TextChanged="TextBox_TextChanged" RenderTransformOrigin="-0.053,0.478"/>
+        <Button x:Name="inclusionstartButton" Content="Add inclusions" Grid.Column="1" HorizontalAlignment="Left" Margin="534,278,0,0" VerticalAlignment="Top" Width="286" Height="29" Click="inslucionButton_Click" FontWeight="Bold"/>
+        <Label Content="                Inclusions" HorizontalAlignment="Left" Margin="534,192,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="309" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" Grid.Column="1"/>
+        <Button x:Name="restartArray" Content="Restart" HorizontalAlignment="Left" Margin="10,659,0,0" VerticalAlignment="Top" Width="277" Height="34" Click="restartArray_Click" Grid.ColumnSpan="2"/>
+        <RadioButton x:Name="Moore" Content="Moore" Grid.Column="1" HorizontalAlignment="Left" Margin="659,121,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" GroupName="Simulation"/>
+        <RadioButton x:Name="VonNeumann" Content="VonNeumann" Grid.Column="1" HorizontalAlignment="Left" Margin="546,121,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked_1" RenderTransformOrigin="-1.228,0.8" GroupName="Simulation"/>
+        <Label Content="&#x9;MonteCarlo" HorizontalAlignment="Left" Margin="534,312,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="309" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" Grid.Column="1"/>
+        <RadioButton Content="Moore2" Grid.Column="1" HorizontalAlignment="Left" Margin="750,121,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked_2" GroupName="Simulation"/>
+        <TextBox x:Name="xTextBox" Grid.Column="1" Height="23" Margin="750,141,23,0" TextWrapping="Wrap" Text="20" VerticalAlignment="Top" TextChanged="xTextBox_TextChanged"/>
+        <Button x:Name="MakeStep" Content="Make Step" HorizontalAlignment="Left" Margin="10,697,0,0" VerticalAlignment="Top" Width="277" Height="35" Click="Button_Click" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="MonteCarloVariation" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="534,343,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="70"/>
+        <Button x:Name="montecarloGenerate" Content="Monte Carlo" Grid.Column="1" HorizontalAlignment="Left" Margin="614,343,0,0" VerticalAlignment="Top" Width="219" Height="23" Click="MonteCarloGenerateBurron_Click"/>
+        <Label Content="&#x9;Energy" HorizontalAlignment="Left" Margin="534,407,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="309" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" Grid.Column="1"/>
+        <Button Content="Energy spread" Grid.Column="1" HorizontalAlignment="Left" Margin="534,473,0,0" VerticalAlignment="Top" Width="299" Height="28" Click="EnergySpreadButton_Click"/>
+        <Label x:Name="jgbLabel" Content="Jgb &lt;0.1 - 1&gt;" Grid.Column="1" HorizontalAlignment="Left" Margin="534,376,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.026,0" Width="84"/>
+        <TextBox x:Name="jgbValues" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="623,376,0,0" TextWrapping="Wrap" Text="0.1" VerticalAlignment="Top" Width="120" TextChanged="jgbValues_TextChanged"/>
+        <Label Content="Enable energy spreading" Grid.Column="1" HorizontalAlignment="Left" Margin="534,440,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.237,-0.115" Width="187" Height="28"/>
+        <Label Content="&#x9;Rx" HorizontalAlignment="Left" Margin="534,597,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="309" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" Grid.Column="1"/>
+        <Button x:Name="rxStart1" Content="Start SRX" Grid.Column="1" HorizontalAlignment="Left" Margin="534,628,0,0" VerticalAlignment="Top" Width="299" Height="26" Click="RxButton_Click" IsEnabled="False"/>
+        <TextBlock x:Name="numberOfSteps" Grid.Column="1" HorizontalAlignment="Left" Margin="670,653,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="23" Width="12" RenderTransformOrigin="2.308,0.391"/>
+        <RadioButton x:Name="heterogenousRadioButton"  Content="Heterogniczna" Grid.Column="1" HorizontalAlignment="Left" Margin="534,506,0,0" VerticalAlignment="Top" Height="20" Width="104" GroupName="Energy" Checked="heterogenousRadioButton_Checked"/>
+        <RadioButton x:Name="homogenousRadioButton" Content="Homogeniczna" Grid.Column="1" HorizontalAlignment="Left" Margin="726,506,0,0" VerticalAlignment="Top" Height="20" Width="107" IsChecked="True" Checked="homogenousRadioButton_Checked" GroupName="Energy"/>
+        <CheckBox x:Name="energyDistributionCheckBox" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="721,446,0,0" VerticalAlignment="Top" Checked="EnergySpreadCheck_Checked" Unchecked="EnergySpreadCheck_Unchecked" IsEnabled="False" Width="23"/>
+        <Button x:Name="clearEnergy" Content="Clear" Grid.Column="1" HorizontalAlignment="Left" Margin="534,531,0,0" VerticalAlignment="Top" Width="299" Height="26" Click="clearEnergy_Click"/>
+        <Button x:Name="showHideEnergy" Content="Energy / Structure" Grid.Column="1" HorizontalAlignment="Left" Margin="534,562,0,0" VerticalAlignment="Top" Width="299" Height="30" Click="ShowHideEnergy_Click"/>
+        <Label Content="&#x9;Borders" HorizontalAlignment="Left" Margin="534,672,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="309" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" Grid.Column="1"/>
+        <Button x:Name="makeBorder" Content="Make border" Grid.Column="1" HorizontalAlignment="Left" Margin="534,706,0,0" VerticalAlignment="Top" Width="299" RenderTransformOrigin="-0.56,-0.2" Height="26" Click="makeBorder_Click"/>
+        <Button x:Name="borderBackground" Content="Clear border background" Grid.Column="1" HorizontalAlignment="Left" Margin="534,752,0,0" VerticalAlignment="Top" Width="299" Height="30" Click="clearBorderBackground_Click"/>
+        <Label Content="&#x9;Simulation type" HorizontalAlignment="Left" Margin="534,0,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="309" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" Grid.Column="1"/>
+        <RadioButton Content="Cerrular Automata" Grid.Column="1" HorizontalAlignment="Left" Margin="534,31,0,0" VerticalAlignment="Top" Checked="cellularAutomataSimluation_Checked"/>
+        <RadioButton Content="Monte Carlo" Grid.Column="1" HorizontalAlignment="Left" Margin="686,31,0,0" VerticalAlignment="Top" Checked="monteCarloSimluationChecked" Width="88"/>
+        <Button x:Name="startButton" Content="Start" HorizontalAlignment="Left" Margin="10,613,0,0" VerticalAlignment="Top" Width="277" Grid.ColumnSpan="2" Height="41" Click="startButton_Click"/>
+        <Label Content="&#x9;Rx Nucleons" HorizontalAlignment="Left" Margin="225,613,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="304" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" Grid.Column="1"/>
+        <TextBox x:Name="rxConstantNucleonsTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="311,643,0,0" TextWrapping="Wrap" Text="20
+                 " VerticalAlignment="Top" Width="28" TextChanged="rxNucleonsSizeConst_TextChanged"/>
+        <Label Content="Constant size:" Grid.Column="1" HorizontalAlignment="Left" Margin="225,639,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.237,-0.115" Width="101" Height="28"/>
+        <RadioButton x:Name="constantRadioButton" Content="Enable" Grid.Column="1" HorizontalAlignment="Left" Margin="366,644,0,0" VerticalAlignment="Top" Checked="constantRadioButton_Checked"/>
+        <Label Content="&#x9;Substructers" HorizontalAlignment="Left" Margin="225,672,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="304" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" Grid.Column="1"/>
+        <Label Content="Number of grains:&#xD;&#xA;" Grid.Column="1" HorizontalAlignment="Left" Margin="225,703,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="substructerBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="331,706,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="35" TextChanged="substructerTextBox_TextChanged_1"/>
+        <Button Content="Start substructure" Grid.Column="1" HorizontalAlignment="Left" Margin="225,753,0,0" VerticalAlignment="Top" Width="304" Click="startSubstructersButton_Click_1" Height="29"/>
+        <ComboBox x:Name="substructuresComboBox" Grid.Column="1" HorizontalAlignment="Left" Margin="331,731,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="substructuresComboBox_SelectionChanged"/>
+
+    </Grid>
+</Window>

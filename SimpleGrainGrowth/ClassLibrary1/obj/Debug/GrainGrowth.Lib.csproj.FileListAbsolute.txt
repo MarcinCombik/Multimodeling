@@ -1,0 +1,16 @@
+C:\Users\marci\source\repos\SimpleGrainGrowth\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\marci\source\repos\SimpleGrainGrowth\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\marci\source\repos\SimpleGrainGrowth\ClassLibrary1\obj\Debug\GrainGrowth.Lib.csproj.CoreCompileInputs.cache
+C:\Users\marci\source\repos\SimpleGrainGrowth\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\marci\source\repos\SimpleGrainGrowth\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\Users\marci\source\repos\SimpleGrainGrowth\ClassLibrary1\obj\Debug\GrainGrowth.Lib.csprojAssemblyReference.cache
+D:\SimpleGrainGrowth\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+D:\SimpleGrainGrowth\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+D:\SimpleGrainGrowth\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+D:\SimpleGrainGrowth\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+D:\SimpleGrainGrowth\ClassLibrary1\obj\Debug\GrainGrowth.Lib.csprojResolveAssemblyReference.cache
+F:\SimpleGrainGrowth\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+F:\SimpleGrainGrowth\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+F:\SimpleGrainGrowth\ClassLibrary1\obj\Debug\GrainGrowth.Lib.csproj.CoreCompileInputs.cache
+F:\SimpleGrainGrowth\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+F:\SimpleGrainGrowth\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
